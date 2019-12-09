@@ -1,0 +1,16 @@
+header {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a.brand {
+  font-family: Lobster;
+}
+
+header > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+}
