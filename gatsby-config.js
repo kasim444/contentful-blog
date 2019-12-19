@@ -2,9 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Welcome to my blog 👋. `,
     description: `In this block you will find my tricks, tutorials and notes about the software. I hope you have a good time.🖖`,
-    author: `@gatsbyjs`,
+    author: `Kasim ŞEN`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -13,7 +14,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`
+      },
+    },
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
